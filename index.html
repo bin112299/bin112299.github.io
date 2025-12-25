@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Link Tải Free Fire Max</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #ff4b2b;
+            --secondary-color: #ff416c;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: var(--text-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #444;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .link-item {
+            background: #f9f9f9;
+            border: 1px solid #eee;
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .link-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .file-name {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            word-break: break-all;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        button, .download-btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: opacity 0.3s;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .copy-btn {
+            background-color: #4e54c8;
+            color: white;
+        }
+
+        .download-btn {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .copy-btn.success {
+            background-color: #2ecc71;
+        }
+
+        /* Toast thông báo */
+        #toast {
+            visibility: hidden;
+            min-width: 200px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 50px;
+            padding: 12px;
+            position: fixed;
+            z-index: 1;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #toast.show {
+            visibility: visible;
+            animation: fadeInOut 2s;
+        }
+
+        @keyframes fadeInOut {
+            0% {opacity: 0;}
+            20% {opacity: 1;}
+            80% {opacity: 1;}
+            100% {opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2><i class="fas fa-download"></i> Download Center</h2>
+
+    <div class="link-item">
+        <span class="file-name">1. Main OBB (2019116013)</span>
+        <div class="button-group">
+            <button class="copy-btn" onclick="copyToClipboard('https://www.mediafire.com/file/j8etxuml2f32aw9/main.2019116013.com.dts.freefiremax.obb/file', this)">
+                <i class="far fa-copy"></i> Copy Link
+            </button>
+            <a href="https://www.mediafire.com/file/j8etxuml2f32aw9/main.2019116013.com.dts.freefiremax.obb/file" target="_blank" class="download-btn">
+                <i class="fas fa-external-link-alt"></i> Tải Ngay
+            </a>
+        </div>
+    </div>
+
+    <div class="link-item">
+        <span class="file-name">2. Base APK</span>
+        <div class="button-group">
+            <button class="copy-btn" onclick="copyToClipboard('https://www.mediafire.com/file/tb3hn47wx6tryji/base.apk/file', this)">
+                <i class="far fa-copy"></i> Copy Link
+            </button>
+            <a href="https://www.mediafire.com/file/tb3hn47wx6tryji/base.apk/file" target="_blank" class="download-btn">
+                <i class="fas fa-external-link-alt"></i> Tải Ngay
+            </a>
+        </div>
+    </div>
+
+    <div class="link-item">
+        <span class="file-name">3. Free Fire Max 1.117.1 (XAPK)</span>
+        <div class="button-group">
+            <button class="copy-btn" onclick="copyToClipboard('https://www.mediafire.com/file/gd79uuf7ts3ov7f/Free_Fire_Max_1.117.1_OBB13.xapk/file', this)">
+                <i class="far fa-copy"></i> Copy Link
+            </button>
+            <a href="https://www.mediafire.com/file/gd79uuf7ts3ov7f/Free_Fire_Max_1.117.1_OBB13.xapk/file" target="_blank" class="download-btn">
+                <i class="fas fa-external-link-alt"></i> Tải Ngay
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="toast">Đã sao chép liên kết!</div>
+
+<script>
+    function copyToClipboard(text, btn) {
+        navigator.clipboard.writeText(text).then(() => {
+            // Hiển thị toast
+            const toast = document.getElementById("toast");
+            toast.className = "show";
+            setTimeout(() => { toast.className = toast.className.replace("show", ""); }, 2000);
+
+            // Hiệu ứng nút
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check"></i> Done!';
+            btn.classList.add('success');
+            
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.classList.remove('success');
+            }, 2000);
+        });
+    }
+</script>
+
+</body>
+</html>
