@@ -3,272 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danh Sách Link Tải Free Fire Max</title>
+    <title>Game Center - Download Links</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #ff4b2b;
-            --secondary-color: #ff416c;
-            --bg-color: #f4f7f6;
-            --card-bg: #ffffff;
-            --text-color: #333;
+            --primary-gradient: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
+            --accent-color: #ff4b2b;
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
+            color: var(--text-main);
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            color: var(--text-color);
+            padding: 20px;
         }
 
         .container {
-            width: 90%;
-            max-width: 600px;
+            width: 100%;
+            max-width: 500px;
             background: var(--card-bg);
             padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
         h2 {
             text-align: center;
-            color: #444;
+            font-size: 1.8rem;
             margin-bottom: 30px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .link-item {
-            background: #f9f9f9;
-            border: 1px solid #eee;
-            padding: 15px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            transition: transform 0.3s ease;
+        .link-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
         }
 
-        .link-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        .link-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            transform: translateY(-3px);
+            border-color: #00b4db;
+        }
+
+        .file-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .file-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-gradient);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
         }
 
         .file-name {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 10px;
-            color: #2c3e50;
-            word-break: break-all;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-main);
         }
 
         .button-group {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 10px;
         }
 
-        button, .download-btn {
-            flex: 1;
+        .btn {
             padding: 10px;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
+            font-size: 0.85rem;
             font-weight: 600;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            transition: opacity 0.3s;
+            gap: 6px;
+            transition: all 0.2s;
             text-decoration: none;
-            font-size: 14px;
         }
 
-        .copy-btn {
-            background-color: #4e54c8;
+        .btn-copy {
+            background: #334155;
             color: white;
         }
 
-        .download-btn {
-            background-color: var(--primary-color);
+        .btn-copy:hover { background: #475569; }
+
+        .btn-dl {
+            background: var(--primary-gradient);
             color: white;
         }
 
-        button:active {
-            transform: scale(0.98);
-        }
-
-        .copy-btn.success {
-            background-color: #2ecc71;
-        }
+        .btn-dl:hover { opacity: 0.9; }
 
         /* Toast thông báo */
         #toast {
             visibility: hidden;
             min-width: 200px;
-            background-color: #333;
-            color: #fff;
+            background-color: #10b981;
+            color: white;
             text-align: center;
-            border-radius: 50px;
-            padding: 12px;
+            border-radius: 12px;
+            padding: 14px;
             position: fixed;
-            z-index: 1;
+            z-index: 10;
             bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
+            font-weight: 600;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3);
         }
 
         #toast.show {
             visibility: visible;
-            animation: fadeInOut 2s;
+            animation: slideUp 0.3s, fadeOut 0.3s 1.7s;
         }
 
-        @keyframes fadeInOut {
-            0% {opacity: 0;}
-            20% {opacity: 1;}
-            80% {opacity: 1;}
-            100% {opacity: 0;}
-        }
+        @keyframes slideUp { from {bottom: 0; opacity: 0;} to {bottom: 30px; opacity: 1;} }
+        @keyframes fadeOut { from {opacity: 1;} to {opacity: 0;} }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h2><i class="fas fa-download"></i> Download Center</h2>
+    <h2><i class="fas fa-shield-alt"></i> Download Center</h2>
 
-    <div class="link-item">
-        <span class="file-name">1. Main OBB (2019116013)</span>
+    <div class="link-card">
+        <div class="file-info">
+            <div class="file-icon"><i class="fas fa-file-archive"></i></div>
+            <div class="file-name">Main OBB Free Fire Max</div>
+        </div>
         <div class="button-group">
-            <button class="copy-btn" onclick="copyToClipboard('https://www.mediafire.com/file/j8etxuml2f32aw9/main.2019116013.com.dts.freefiremax.obb/file', this)">
+            <button class="btn btn-copy" onclick="copyLink('https://www.mediafire.com/file/j8etxuml2f32aw9/main.2019116013.com.dts.freefiremax.obb/file', this)">
                 <i class="far fa-copy"></i> Copy Link
             </button>
-            <a href="https://www.mediafire.com/file/j8etxuml2f32aw9/main.2019116013.com.dts.freefiremax.obb/file" target="_blank" class="download-btn">
-                <i class="fas fa-external-link-alt"></i> Tải Ngay
+            <a href="https://www.mediafire.com/file/j8etxuml2f32aw9/main.2019116013.com.dts.freefiremax.obb/file" target="_blank" class="btn btn-dl">
+                <i class="fas fa-download"></i> Tải Về
             </a>
         </div>
     </div>
 
-    <div class="link-item">
-        <span class="file-name">2. Brmod APK</span>
+    <div class="link-card">
+        <div class="file-info">
+            <div class="file-icon"><i class="fab fa-android"></i></div>
+            <div class="file-name">Base APK</div>
+        </div>
         <div class="button-group">
-            <button class="copy-btn" onclick="copyToClipboard('gg.setVisible(false)
-
--- ===============================
--- DEV INFO
--- ===============================
-local TITLE = "🇮🇩 VUNYXITERZVIP 🇮🇩\n😈 SPEED HACK FF MAX OB13 😈"
-
--- ===============================
--- STATE
--- ===============================
-local ACTIVE = false
-local CACHE = {
-    slow = {},
-    speed = {}
-}
-
--- ===============================
--- ENABLE (VERY FAST)
--- ===============================
-local function ENABLE_ALL()
-    gg.setRanges(gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS)
-
-    -- ⚡ MICRO DELAY (hanya buat sync memory)
-    gg.sleep(40)
-
-    -- 🐌 SLOW MOVEMENT
-    gg.searchNumber("h 00 00 80 40 33 33 93 40 3D 0A F7 3F", gg.TYPE_BYTE)
-    local r1 = gg.getResultsCount()
-    if r1 > 0 then
-        CACHE.slow = gg.getResults(r1)
-        gg.editAll("h 00 00 80 40 00 00 80 40 CB D2 4D 3E", gg.TYPE_BYTE)
-    end
-    gg.clearResults()
-
-    gg.sleep(40)
-
-    -- 🚀 SPEED
-    gg.searchNumber("h 02 2B 07 3D 02 2B 07 3D 02 2B 07 3D", gg.TYPE_BYTE)
-    local r2 = gg.getResultsCount()
-    if r2 > 0 then
-        CACHE.speed = gg.getResults(r2)
-        gg.editAll("h 08 39 60 3B 08 39 60 3B 08 39 60 3B", gg.TYPE_BYTE)
-    end
-    gg.clearResults()
-
-    gg.toast("🟢 SPEED MODE ON")
-end
-
--- ===============================
--- DISABLE (INSTANT)
--- ===============================
-local function DISABLE_ALL()
-    if #CACHE.slow > 0 then
-        gg.setValues(CACHE.slow)
-    end
-    if #CACHE.speed > 0 then
-        gg.setValues(CACHE.speed)
-    end
-    gg.toast("🔴 SPEED MODE OFF")
-end
-
--- ===============================
--- ICON TOGGLE SYSTEM
--- ===============================
-while true do
-    if gg.isVisible(true) then
-        gg.setVisible(false)
-
-        if ACTIVE then
-            DISABLE_ALL() -- ⚡ SUPER INSTAN
-            ACTIVE = false
-        else
-            ENABLE_ALL()  -- 🚀 CEPAT BANGET
-            ACTIVE = true
-        end
-    end
-    gg.sleep(30)
-end', this)">
+            <button class="btn btn-copy" onclick="copyLink('https://www.mediafire.com/file/tb3hn47wx6tryji/base.apk/file', this)">
                 <i class="far fa-copy"></i> Copy Link
             </button>
-            <a href="https://www.mediafire.com/file/toafdb01081jq1a/brmodv2(infernoMods).apk/file" target="_blank" class="download-btn">
-                <i class="fas fa-external-link-alt"></i> Tải Ngay
+            <a href="https://www.mediafire.com/file/tb3hn47wx6tryji/base.apk/file" target="_blank" class="btn btn-dl">
+                <i class="fas fa-download"></i> Tải Về
             </a>
         </div>
     </div>
 
-    <div class="link-item">
-        <span class="file-name">3. Free Fire Max 1.117.1 (XAPK)</span>
+    <div class="link-card">
+        <div class="file-info">
+            <div class="file-icon"><i class="fas fa-box-open"></i></div>
+            <div class="file-name">FF Max 1.117.1 (XAPK)</div>
+        </div>
         <div class="button-group">
-            <button class="copy-btn" onclick="copyToClipboard('https://www.mediafire.com/file/gd79uuf7ts3ov7f/Free_Fire_Max_1.117.1_OBB13.xapk/file', this)">
+            <button class="btn btn-copy" onclick="copyLink('https://www.mediafire.com/file/gd79uuf7ts3ov7f/Free_Fire_Max_1.117.1_OBB13.xapk/file', this)">
                 <i class="far fa-copy"></i> Copy Link
             </button>
-            <a href="https://www.mediafire.com/file/gd79uuf7ts3ov7f/Free_Fire_Max_1.117.1_OBB13.xapk/file" target="_blank" class="download-btn">
-                <i class="fas fa-external-link-alt"></i> Tải Ngay
+            <a href="https://www.mediafire.com/file/gd79uuf7ts3ov7f/Free_Fire_Max_1.117.1_OBB13.xapk/file" target="_blank" class="btn btn-dl">
+                <i class="fas fa-download"></i> Tải Về
+            </a>
+        </div>
+    </div>
+
+    <div class="link-card" style="border-color: #fbbf24;">
+        <div class="file-info">
+            <div class="file-icon" style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);"><i class="fas fa-globe"></i></div>
+            <div class="file-name">VPN India (Premium)</div>
+        </div>
+        <div class="button-group">
+            <button class="btn btn-copy" onclick="copyLink('https://www.mediafire.com/file/835gmkh1rk6vc9i/bindz102.apk/file', this)">
+                <i class="far fa-copy"></i> Copy Link
+            </button>
+            <a href="https://www.mediafire.com/file/835gmkh1rk6vc9i/bindz102.apk/file" target="_blank" class="btn btn-dl">
+                <i class="fas fa-download"></i> Tải Về
             </a>
         </div>
     </div>
 </div>
 
-<div id="toast">Đã sao chép liên kết!</div>
+<div id="toast">Đã copy link thành công!</div>
 
 <script>
-    function copyToClipboard(text, btn) {
+    function copyLink(text, btn) {
         navigator.clipboard.writeText(text).then(() => {
-            // Hiển thị toast
             const toast = document.getElementById("toast");
             toast.className = "show";
-            setTimeout(() => { toast.className = toast.className.replace("show", ""); }, 2000);
+            setTimeout(() => { toast.className = ""; }, 2000);
 
-            // Hiệu ứng nút
-            const originalText = btn.innerHTML;
-            btn.innerHTML = '<i class="fas fa-check"></i> Done!';
-            btn.classList.add('success');
+            const originalHtml = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check"></i> Đã Copy';
+            btn.style.backgroundColor = '#10b981';
             
             setTimeout(() => {
-                btn.innerHTML = originalText;
-                btn.classList.remove('success');
+                btn.innerHTML = originalHtml;
+                btn.style.backgroundColor = '';
             }, 2000);
         });
     }
